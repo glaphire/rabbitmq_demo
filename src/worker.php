@@ -9,7 +9,7 @@ $connection = new AMQPStreamConnection('localhost', 5672, 'guest', 'guest');
 
 $channel = $connection->channel();
 
-$channel->queue_declare('hello', false, false, false, false);
+$channel->queue_declare('task_queue', false, false, false, false);
 
 echo " [*] Waiting for messages. To exit press CTRL+C\n";
 
